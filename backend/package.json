@@ -1,0 +1,57 @@
+{
+    "name": "book-club",
+    "version": "1.0.0",
+    "description": "Вебплатформа для спільноти книголюбів - відстежуйте прочитані книги, діліться рецензіями, цитатами та підбірками.",
+    "main": "dist/server/index.js",
+    "type": "module",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "dev": "tsx watch src/server/index.ts",
+        "build": "tsc --noCheck",
+        "build:check": "tsc",
+        "start": "node dist/server/index.js",
+        "db:generate": "drizzle-kit generate",
+        "db:migrate": "tsx src/server/db/migrate.ts",
+        "db:seed": "tsx src/server/db/seeds/seed.ts",
+        "db:images": "tsx src/server/db/seeds/download-images.ts",
+        "db:studio": "drizzle-kit studio",
+        "lint": "eslint src --ext .ts",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "type-check": "tsc --noEmit"
+    },
+    "keywords": [
+        "book-club",
+        "books",
+        "reading",
+        "reviews"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@fastify/cookie": "^11.0.2",
+        "@fastify/cors": "^11.2.0",
+        "@fastify/jwt": "^10.0.0",
+        "@fastify/multipart": "^10.0.0",
+        "@fastify/oauth2": "^8.2.0",
+        "@fastify/static": "^9.1.1",
+        "@fastify/swagger": "^9.7.0",
+        "@scalar/fastify-api-reference": "^1.52.3",
+        "bcrypt": "^6.0.0",
+        "dotenv": "^17.4.2",
+        "drizzle-orm": "^0.45.2",
+        "fastify": "^5.8.5",
+        "postgres": "^3.4.9",
+        "zod": "^4.3.6"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^6.0.0",
+        "@types/node": "^25.6.0",
+        "drizzle-kit": "^0.31.10",
+        "eslint": "^10.2.1",
+        "prettier": "^3.8.3",
+        "tsx": "^4.21.0",
+        "typescript": "^6.0.3"
+    }
+}

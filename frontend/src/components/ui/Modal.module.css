@@ -1,0 +1,72 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(44, 24, 16, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  max-width: 500px;
+  width: 90%;
+  outline: none;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.dialog {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid rgba(44, 24, 16, 0.1);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-xl);
+  color: var(--primary);
+}
+
+.closeButton {
+  padding: 0;
+  min-width: unset;
+}
+
+.content {
+  padding: var(--space-6);
+}
+
+.entering {
+  animation: fade 200ms ease-out;
+}
+
+.exiting {
+  animation: fade 200ms ease-in reverse;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

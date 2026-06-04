@@ -1,0 +1,217 @@
+export const genresData = [
+    {
+    key: 'fiction',
+    name: 'Художня література',
+    description: 'Твори, засновані на уяві автора, а не на реальних подіях.',
+    parentKey: null,
+  },
+  {
+    key: 'nonfiction',
+    name: 'Нехудожня література',
+    description: 'Твори, що ґрунтуються на реальних фактах, подіях та людях.',
+    parentKey: null,
+  },
+  {
+    key: 'poetry',
+    name: 'Поезія',
+    description: 'Літературна форма, що використовує естетичні та ритмічні якості мови.',
+    parentKey: null,
+  },
+  {
+    key: 'drama',
+    name: 'Драматургія',
+    description: 'Твори, призначені для театральної постановки.',
+    parentKey: null,
+  },
+  {
+    key: 'children',
+    name: 'Дитяча література',
+    description: 'Книги, написані для дітей та підлітків.',
+    parentKey: null,
+  },
+  {
+    key: 'educational',
+    name: 'Навчальна та наукова',
+    description: 'Підручники, наукові праці та освітні матеріали.',
+    parentKey: null,
+  },
+  {
+    key: 'comics',
+    name: 'Комікси та графічні романи',
+    description: 'Оповіді, що поєднують текст і малюнки.',
+    parentKey: null,
+  },
+  {
+    key: 'reference',
+    name: 'Довідкова література',
+    description: 'Енциклопедії, словники, довідники.',
+    parentKey: null,
+  },
+
+    {
+    key: 'classic',
+    name: 'Класична проза',
+    description: 'Визнані шедеври світової та вітчизняної літератури.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'contemporary',
+    name: 'Сучасна проза',
+    description: 'Твори сучасних авторів, що відображають реалії нашого часу.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'historical',
+    name: 'Історичний роман',
+    description: 'Художні твори, дія яких відбувається в минулому.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'fantasy',
+    name: 'Фентезі',
+    description: 'Твори з елементами магії, вигаданих світів та надприродних істот.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'scifi',
+    name: 'Наукова фантастика',
+    description: 'Твори, що досліджують вплив науки та технологій на суспільство.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'detective',
+    name: 'Детектив',
+    description: 'Твори про розслідування злочинів та пошук злочинців.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'thriller',
+    name: 'Трилер',
+    description: 'Напружені твори з елементами небезпеки та саспенсу.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'romance',
+    name: 'Романтика',
+    description: 'Твори, зосереджені на любовних стосунках.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'horror',
+    name: 'Жахи',
+    description: 'Твори, що викликають страх та тривогу.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'adventure',
+    name: 'Пригодницька',
+    description: 'Твори з захоплюючими пригодами та подорожами.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'ukrainian_prose',
+    name: 'Українська проза',
+    description: 'Художні твори українських авторів.',
+    parentKey: 'fiction',
+  },
+  {
+    key: 'short_stories',
+    name: 'Оповідання та новели',
+    description: 'Короткі прозові твори.',
+    parentKey: 'fiction',
+  },
+
+    {
+    key: 'biography',
+    name: 'Біографія та мемуари',
+    description: 'Розповіді про реальних людей та їхнє життя.',
+    parentKey: 'nonfiction',
+  },
+  {
+    key: 'history',
+    name: 'Історія',
+    description: 'Книги про минулі події та епохи.',
+    parentKey: 'nonfiction',
+  },
+  {
+    key: 'psychology',
+    name: 'Психологія',
+    description: 'Книги про людську психіку, поведінку та розвиток.',
+    parentKey: 'nonfiction',
+  },
+  {
+    key: 'philosophy',
+    name: 'Філософія',
+    description: 'Роздуми про сенс буття, мораль та пізнання.',
+    parentKey: 'nonfiction',
+  },
+  {
+    key: 'selfhelp',
+    name: 'Саморозвиток',
+    description: 'Книги для особистісного зростання та покращення якості життя.',
+    parentKey: 'nonfiction',
+  },
+  {
+    key: 'travel',
+    name: 'Подорожі',
+    description: 'Книги про мандрівки та відкриття нових місць.',
+    parentKey: 'nonfiction',
+  },
+  {
+    key: 'politics',
+    name: 'Політика та суспільство',
+    description: 'Аналіз суспільних процесів, влади та держави.',
+    parentKey: 'nonfiction',
+  },
+
+    {
+    key: 'picture_books',
+    name: 'Книги з картинками',
+    description: 'Ілюстровані книги для найменших читачів.',
+    parentKey: 'children',
+  },
+  {
+    key: 'ya',
+    name: 'Young Adult',
+    description: 'Книги для підлітків та молоді.',
+    parentKey: 'children',
+  },
+  {
+    key: 'fairy_tales',
+    name: 'Казки',
+    description: 'Народні та авторські казки.',
+    parentKey: 'children',
+  },
+
+    {
+    key: 'programming',
+    name: 'Програмування',
+    description: 'Книги з розробки програмного забезпечення.',
+    parentKey: 'educational',
+  },
+  {
+    key: 'business',
+    name: 'Бізнес та економіка',
+    description: 'Книги про підприємництво, менеджмент та фінанси.',
+    parentKey: 'educational',
+  },
+  {
+    key: 'science',
+    name: 'Природничі науки',
+    description: 'Книги з фізики, хімії, біології та інших наук.',
+    parentKey: 'educational',
+  },
+
+    {
+    key: 'ukrainian_poetry',
+    name: 'Українська поезія',
+    description: 'Поетичні твори українських авторів.',
+    parentKey: 'poetry',
+  },
+  {
+    key: 'world_poetry',
+    name: 'Світова поезія',
+    description: 'Поетичні твори авторів з усього світу.',
+    parentKey: 'poetry',
+  },
+];

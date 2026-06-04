@@ -1,0 +1,63 @@
+.card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card.primary .iconWrapper {
+  background-color: rgba(139, 69, 19, 0.1);
+  color: var(--primary);
+}
+
+.card.secondary .iconWrapper {
+  background-color: rgba(210, 105, 30, 0.1);
+  color: var(--secondary);
+}
+
+.card.success .iconWrapper {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: var(--success);
+}
+
+.card.warning .iconWrapper {
+  background-color: rgba(245, 124, 0, 0.1);
+  color: #F57C00;
+}
+
+.content {
+  flex: 1;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}

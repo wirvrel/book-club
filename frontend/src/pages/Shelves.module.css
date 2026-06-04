@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.shelvesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.shelfSection {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  box-shadow: var(--shadow-sm);
+}
+
+.shelfHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--paper);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.shelfHeader h2 {
+  font-size: var(--text-2xl);
+  color: var(--primary);
+}
+
+.count {
+  font-size: var(--text-sm);
+  background-color: var(--paper);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+}
+
+.booksList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .booksList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bookItem {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.formatTag {
+  font-size: 10px;
+  background-color: var(--paper);
+  color: var(--primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  width: fit-content;
+  font-weight: var(--font-bold);
+}
+
+.noData {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--text-muted);
+}
+
+.bookItem:hover {
+  background-color: rgba(139, 69, 19, 0.03);
+}
+
+.miniCover {
+  width: 60px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.bookInfo h3 {
+  font-size: var(--text-base);
+  line-height: 1.2;
+}
+
+.progressWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: var(--space-1);
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--paper);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--secondary);
+  border-radius: var(--radius-full);
+}
+
+.progressText {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: var(--space-4);
+}

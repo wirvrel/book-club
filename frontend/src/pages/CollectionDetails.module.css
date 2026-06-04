@@ -1,0 +1,295 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-10);
+  background-color: var(--surface);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  box-shadow: var(--shadow-lg);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.heroImg {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.heroContent h1 {
+  font-size: var(--text-4xl);
+  line-height: 1.1;
+}
+
+.description {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.meta {
+  display: flex;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.headerActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.editBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bookCardWrapper {
+  position: relative;
+}
+
+.bookCardContainer {
+  height: 100%;
+}
+
+.bookCard {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.bookCard:hover {
+  transform: translateY(-4px);
+}
+
+.manageCard {
+  background-color: var(--surface);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bookCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.reorderControls {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.reorderControls button {
+  background: var(--background);
+  border: 1px solid rgba(44, 24, 16, 0.1);
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.reorderControls button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.orderBadge {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: var(--secondary);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.bookCover {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.bookInfo h3 {
+  font-size: var(--text-base);
+  line-height: 1.2;
+}
+
+.bookRating {
+  color: var(--secondary);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+}
+
+.removeBookBtnVisible {
+  width: 100%;
+  padding: var(--space-2);
+  background-color: rgba(198, 40, 40, 0.05);
+  color: var(--error);
+  border: 1px solid rgba(198, 40, 40, 0.2);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: var(--text-sm);
+}
+
+.removeBookBtnVisible:hover {
+  background-color: var(--error);
+  color: white;
+}
+
+.booksSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-10);
+}
+
+.manageGrid {
+  gap: var(--space-12);
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--text-muted);
+  font-style: italic;
+  background-color: var(--paper);
+  border-radius: var(--radius-lg);
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(44, 24, 16, 0.05);
+}
+
+.formRightActions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.deleteCollBtn {
+  color: var(--error) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deleteCollBtn:hover {
+  background-color: rgba(198, 40, 40, 0.05) !important;
+}
+
+.socialActions {
+  display: flex;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(44, 24, 16, 0.05);
+}
+
+.likeBtn, .commentStat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-weight: var(--font-bold);
+  font-size: var(--text-base);
+}
+
+.likeBtn {
+  cursor: pointer;
+  padding: 0;
+}
+
+.liked {
+  color: var(--error);
+}
+
+.commentsSection {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 2px solid rgba(44, 24, 16, 0.05);
+}
+
+.commentsHeader {
+  margin-bottom: var(--space-6);
+}
+
+.commentsHeader h2 {
+  font-size: var(--text-2xl);
+  color: var(--primary);
+}
